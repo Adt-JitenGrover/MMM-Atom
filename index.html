@@ -204,39 +204,21 @@
             background: #df570c !important;
         }
     </style>
-
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script> 
-
-    function myFunction1() {
-
-      document.getElementById("media").style.display = "block";
-
-      document.getElementById("pricing").style.display = "none";
-
-      document.getElementById("distribution").style.display = "none";
-
-  }
-
-  function myFunction2() {
-
-    document.getElementById("media").style.display = "none";
-
-    document.getElementById("pricing").style.display = "block";
-
-    document.getElementById("distribution").style.display = "none";
-
-  }
-
-  function myFunction3() {
-
-    document.getElementById("media").style.display = "none";
-
-    document.getElementById("pricing").style.display = "none";
-
-    document.getElementById("distribution").style.display = "block";
-
-  }
-
+$(document).ready(function(){
+    $("select").change(function(){
+        $(this).find("option:selected").each(function(){
+            var optionValue = $(this).attr("value");
+            if(optionValue){
+                $(".visible").not("." + optionValue).hide();
+                $("." + optionValue).show();
+            } else{
+                $(".visible").hide();
+            }
+        });
+    }).change();
+});
   </script>
 </head>
 
@@ -338,7 +320,7 @@
                                 </div> -->
                                 <div class="card">
                                     <div class="card-header py-2">
-                                        <h5 class="m-0">KEY DRIVERS OF SALES & GROWTH</h5>
+                                        <h5 class="m-0">Key Drivers of Sales & Growth</h5>
                                     </div>
                                     <div class="card-body p-0 text-center">
                                                 <img src="images/summary/image1.jpg" class="img-fluid" alt="">
@@ -356,7 +338,7 @@
                                 </div> -->
                                 <div class="card">
                                     <div class="card-header py-2">
-                                        <h5 class="m-0">VOLUME DECOMPOSITION INTO BASE & INCREMENTAL BY YEAR</h5>
+                                        <h5 class="m-0">Volume Decomposition Into Base & Incremental By Year</h5>
                                     </div>
                                     <div class="card-body p-0 text-center">
                                                 <img src="images/summary/image2.jpg" class="img-fluid" alt="">
@@ -366,7 +348,7 @@
                             <div class="col-6">
                                 <div class="card">
                                     <div class="card-header py-2">
-                                        <h5 class="m-0">THE RETURN ON INVESTMENT FOR DIFFERENT MEDIA CHANNELS</h5>
+                                        <h5 class="m-0">The Return On Investment For Different Media Channels</h5>
                                     </div>
                                     <div class="card-body p-0 text-center">
                                                 <img src="images/summary/image3.jpg" class="img-fluid" alt="">
@@ -376,7 +358,7 @@
                             <div class="col-6">
                                 <div class="card">
                                     <div class="card-header py-2">
-                                        <h5 class="m-0">THE INCREMENTAL IMPACT OF A NEW PRODUCT LAUNCH</h5>
+                                        <h5 class="m-0">The Incremental Impact Of A New Product Launch</h5>
                                     </div>
                                     <div class="card-body p-0 text-center">
                                                 <img src="images/summary/image4.jpg" class="img-fluid" alt="">
@@ -386,23 +368,18 @@
                         </div>
                     </div>
                     <div class="tab-pane fade" id="deepDrive" role="tabpanel" aria-labelledby="deepDrive-tab">
-                        <div class="dropdown m-1 d-flex justify-content-end">
-                            <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Deep Dives
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                              <a class="dropdown-item" onclick="myFunction1()" href="#">Media Deep Dives</a>
-                              <a class="dropdown-item" onclick="myFunction2()" href="#">Pricing Deep Dives</a>
-                              <a class="dropdown-item" onclick="myFunction3()" href="#">Distribution Deep Dives</a>
-                            </div>
-                          </div>
-                          <div id="media">
-                            <h4 class="bg-light p-2 text-center border">Media Deep Dives</h4>
+                            <select class="m-1">
+                                <option>Choose Deep Dives</option>
+                                <option value="media">Media Deep Dives</option>
+                                <option value="pricing">Pricing Deep Dives</option>
+                                <option value="distribution">Distribution Deep Dives</option>
+                            </select>
+                          <div class="media visible">
                         <div class="row mb-3">
                             <div class="col-6">
                                 <div class="card">
                                     <div class="card-header py-2">
-                                        <h5 class="m-0">FIND OPTIMAL LEVEL OF EXECUTION FOR EACH MEDIA CHANNEL</h5>
+                                        <h5 class="m-0">Find Optimal Level Of Execution For Each Media Channel</h5>
                                     </div>
                                     <div class="card-body p-2 text-center">
                                         <img src="images/deepdrive/media/Picture1.jpg" class="img-fluid" alt="">
@@ -412,7 +389,7 @@
                             <div class="col-6">
                                 <div class="card">
                                     <div class="card-header py-2">
-                                        <h5 class="m-0">THE SYNERGISTIC IMPACTS OF MEDIA CHANNELS</h5>
+                                        <h5 class="m-0">The Synergistic Impacts Of Media Channels</h5>
                                     </div>
                                     <div class="card-body p-2 text-center">
                                         <img src="images/deepdrive/media/Picture2.jpg" class="img-fluid" alt="">
@@ -422,8 +399,7 @@
                             <div class="col-6">
                                 <div class="card">
                                     <div class="card-header py-2">
-                                        <h5 class="m-0">IDENTIFY SPENDING OPPORTUNITIES FOR MEDIA
-                                        </h5>
+                                        <h5 class="m-0">Identify Spending Opportunities For Media</h5>
                                     </div>
                                     <div class="card-body p-2 text-center">
                                         <img src="images/deepdrive/media/Picture3.jpg" class="img-fluid" alt="">
@@ -433,7 +409,7 @@
                             <div class="col-6">
                                 <div class="card">
                                     <div class="card-header py-2">
-                                        <h5 class="m-0">THE OPTIMIAL MEDIA AIRING PLAN </h5>
+                                        <h5 class="m-0">The Optimal Media Airing Plan </h5>
                                     </div>
                                     <div class="card-body p-2 text-center">
                                         <img src="images/deepdrive/media/Picture4.png" class="img-fluid mt-3" alt="edlp">
@@ -443,13 +419,12 @@
                         </div>
                         </div>
 
-                        <div id="pricing" style="display: none;">
-                            <h4 class="bg-light p-2 text-center border">Pricing Deep Dives</h4>
+                        <div class="pricing visible">
                         <div class="row mb-3">
                             <div class="col-6">
                                 <div class="card">
                                     <div class="card-header py-2">
-                                        <h5 class="m-0">MY PRICE ELASTICITY RELATIVE TO BENCHMARKS</h5>
+                                        <h5 class="m-0">My Price Elasticity Relative To Benchmarks</h5>
                                     </div>
                                     <div class="card-body p-2 text-center">
                                         <img src="images/deepdrive/pricing/Picture1.jpg" class="img-fluid" alt="">
@@ -459,7 +434,7 @@
                             <div class="col-6">
                                 <div class="card">
                                     <div class="card-header py-2">
-                                        <h5 class="m-0">PRICE ELASTICITY VARY AT EACH PRICE POINT</h5>
+                                        <h5 class="m-0">Price Elasticity Vary At Each Price Point</h5>
                                     </div>
                                     <div class="card-body p-2 text-center">
                                         <img src="images/deepdrive/pricing/Picture2.jpg" class="img-fluid" alt="">
@@ -469,13 +444,12 @@
                         </div>
                         </div>
 
-                        <div id="distribution" style="display: none;">
-                            <h4 class="bg-light p-2 text-center border">Distribution Deep Dives</h4>
+                        <div class="distribution visible">
                             <div class="row mb-3">
                             <div class="col-6">
                                 <div class="card">
                                     <div class="card-header py-2">
-                                        <h5 class="m-0">MY SALES VELOCITY AS COMPARED TO DISTRIBUTION LEVELS</h5>
+                                        <h5 class="m-0">My Sales Velocity As Compared To Distribution Levels</h5>
                                     </div>
                                     <div class="card-body p-2 text-center">
                                         <img src="images/deepdrive/distribution/Picture1.jpg" class="img-fluid" alt="">
@@ -485,7 +459,7 @@
                             <div class="col-6">
                                 <div class="card">
                                     <div class="card-header py-2">
-                                        <h5 class="m-0">PUSH DISTRIBUTION TO GAIN INCREMENTAL BENEFITS</h5>
+                                        <h5 class="m-0">Push Distribution To Gain Incremental Benefits</h5>
                                     </div>
                                     <div class="card-body p-2 text-center">
                                         <img src="images/deepdrive/distribution/Picture2.jpg" class="img-fluid" alt="">
@@ -502,7 +476,7 @@
                             <div class="col-6">
                                 <div class="card">
                                     <div class="card-header py-2">
-                                        <h5 class="m-0">ROLLING UP ANALYSIS ATmPORTFOLIO LEVEL: BRAND VIEW</h5>
+                                        <h5 class="m-0">Rolling Up Analysis At Portfolio Level: Brand View</h5>
                                     </div>
                                     <div class="card-body p-0 text-center">
                                         <img src="images/portfolio/Picture1.png" class="img-fluid" alt="">
@@ -512,7 +486,7 @@
                             <div class="col-6">
                                 <div class="card">
                                     <div class="card-header py-2">
-                                        <h5 class="m-0">COMPARISON OF DRIVER RESPONSIVENESS ACROSS BRANDS</h5>
+                                        <h5 class="m-0">Comparison Of Driver Responsiveness Across Brands</h5>
                                     </div>
                                     <div class="card-body p-0">
                                         <img src="images/portfolio/Picture2.png" class="img-fluid" alt="">
@@ -523,7 +497,7 @@
                             <div class="col-6">
                                 <div class="card">
                                     <div class="card-header py-2">
-                                        <h5 class="m-0">TV SCORECARD: PERFORMANCE OF EACH BRAND ON DIFFERENT PARAMETERS</h5>
+                                        <h5 class="m-0">Tv Scorecard: Performance Of Each Brand On Different Parameters</h5>
                                     </div>
                                     <div class="card-body p-0">
                                         <img src="images/portfolio/Picture3.png" class="img-fluid" alt="">
@@ -534,7 +508,7 @@
                             <div class="col-6">
                                 <div class="card">
                                     <div class="card-header py-2">
-                                        <h5 class="m-0">IDENTIFICATION OF PORTFOLIO LEVEL OPPORTUNITIES FOR INVESTMENTS SHIFT</h5>
+                                        <h5 class="m-0">Identification Of Portfolio Level Opportunities For Investments Shift</h5>
                                     </div>
                                     <div class="card-body p-0">
                                         <img src="images/portfolio/Picture4.png" class="img-fluid" alt="">
