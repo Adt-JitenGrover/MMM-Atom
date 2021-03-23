@@ -298,8 +298,8 @@ $(document).ready(function(){
                 </ul>
                 <div class="tab-content p-1" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                        <div class="row mb-3">
-                            <div class="col-6">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12">
                                 <!-- <div class="card">
                                     <div class="card-header py-2">
                                         <h5 class="m-0">Volume Decomposition – Base Vs. Incremental</h5>
@@ -327,7 +327,7 @@ $(document).ready(function(){
                                     </div>
                                 </div> 
                             </div>
-                            <div class="col-6">
+                            <div class="col-md-6 col-sm-12">
                                 <!-- <div class="card">
                                     <div class="card-header py-2">
                                         <h5 class="m-0">Drivers of Volume Change</h5>
@@ -341,12 +341,12 @@ $(document).ready(function(){
                                         <h5 class="m-0">Volume Decomposition Into Base & Incremental By Year</h5>
                                     </div>
                                     <div class="card-body p-0 text-center">
-                                                <img src="images/summary/image2.jpg" class="img-fluid" alt="">
+                                                <img src="images/summary/image2.jpg" class="img-fluid" alt="" style="width: 700px">
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-6">
-                                <div class="card">
+                            <div class="col-md-6 col-sm-12">
+                                <div class="card mb-0">
                                     <div class="card-header py-2">
                                         <h5 class="m-0">The Return On Investment For Different Media Channels</h5>
                                     </div>
@@ -355,8 +355,8 @@ $(document).ready(function(){
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-6">
-                                <div class="card">
+                            <div class="col-md-6 col-sm-12">
+                                <div class="card mb-0">
                                     <div class="card-header py-2">
                                         <h5 class="m-0">The Incremental Impact Of A New Product Launch</h5>
                                     </div>
@@ -368,15 +368,21 @@ $(document).ready(function(){
                         </div>
                     </div>
                     <div class="tab-pane fade" id="deepDrive" role="tabpanel" aria-labelledby="deepDrive-tab">
-                            <select class="m-1">
-                                <option>Choose Deep Dives</option>
-                                <option value="media">Media Deep Dives</option>
-                                <option value="pricing">Pricing Deep Dives</option>
-                                <option value="distribution">Distribution Deep Dives</option>
+                        <div class="row">
+                            <div class="row m-1 d-flex align-items-center">
+                        <label>Select Deep Drives:</label>
+                    </div>
+                    <div class="row col-3">
+                         <select class="m-1 form-control form-control-sm">
+                                <option value="media">Media Deep Drives</option>
+                                <option value="pricing">Pricing Deep Drives</option>
+                                <option value="distribution">Distribution Deep Drives</option>
                             </select>
+                        </div>
+                        </div>
                           <div class="media visible">
-                        <div class="row mb-3">
-                            <div class="col-6">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12">
                                 <div class="card">
                                     <div class="card-header py-2">
                                         <h5 class="m-0">Find Optimal Level Of Execution For Each Media Channel</h5>
@@ -386,7 +392,7 @@ $(document).ready(function(){
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-6">
+                            <div class="col-md-6 col-sm-12">
                                 <div class="card">
                                     <div class="card-header py-2">
                                         <h5 class="m-0">The Synergistic Impacts Of Media Channels</h5>
@@ -396,8 +402,8 @@ $(document).ready(function(){
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-6">
-                                <div class="card">
+                            <div class="col-md-6 col-sm-12">
+                                <div class="card mb-0">
                                     <div class="card-header py-2">
                                         <h5 class="m-0">Identify Spending Opportunities For Media</h5>
                                     </div>
@@ -406,8 +412,8 @@ $(document).ready(function(){
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-6">
-                                <div class="card">
+                            <div class="col-md-6 col-sm-12">
+                                <div class="card mb-0">
                                     <div class="card-header py-2">
                                         <h5 class="m-0">The Optimal Media Airing Plan </h5>
                                     </div>
@@ -420,9 +426,9 @@ $(document).ready(function(){
                         </div>
 
                         <div class="pricing visible">
-                        <div class="row mb-3">
-                            <div class="col-6">
-                                <div class="card">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12">
+                                <div class="card mb-0">
                                     <div class="card-header py-2">
                                         <h5 class="m-0">My Price Elasticity Relative To Benchmarks</h5>
                                     </div>
@@ -431,8 +437,8 @@ $(document).ready(function(){
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-6">
-                                <div class="card">
+                            <div class="col-md-6 col-sm-12">
+                                <div class="card mb-0">
                                     <div class="card-header py-2">
                                         <h5 class="m-0">Price Elasticity Vary At Each Price Point</h5>
                                     </div>
@@ -445,9 +451,9 @@ $(document).ready(function(){
                         </div>
 
                         <div class="distribution visible">
-                            <div class="row mb-3">
-                            <div class="col-6">
-                                <div class="card">
+                            <div class="row">
+                            <div class="col-md-6 col-sm-12">
+                                <div class="card mb-0">
                                     <div class="card-header py-2">
                                         <h5 class="m-0">My Sales Velocity As Compared To Distribution Levels</h5>
                                     </div>
@@ -456,8 +462,8 @@ $(document).ready(function(){
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-6">
-                                <div class="card">
+                            <div class="col-md-6 col-sm-12">
+                                <div class="card mb-0">
                                     <div class="card-header py-2">
                                         <h5 class="m-0">Push Distribution To Gain Incremental Benefits</h5>
                                     </div>
@@ -472,8 +478,8 @@ $(document).ready(function(){
 
                     <div class="tab-pane fade" id="portfolio" role="tabpanel" aria-labelledby="portfolio-tab">
 
-                        <div class="row mb-3">
-                            <div class="col-6">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12">
                                 <div class="card">
                                     <div class="card-header py-2">
                                         <h5 class="m-0">Rolling Up Analysis At Portfolio Level: Brand View</h5>
@@ -483,35 +489,35 @@ $(document).ready(function(){
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-6">
+                            <div class="col-md-6 col-sm-12">
                                 <div class="card">
                                     <div class="card-header py-2">
                                         <h5 class="m-0">Comparison Of Driver Responsiveness Across Brands</h5>
                                     </div>
                                     <div class="card-body p-0">
-                                        <img src="images/portfolio/Picture2.png" class="img-fluid" alt="">
+                                        <img src="images/portfolio/Picture2.png" class="img-fluid" alt="" style="width: 538px">
                                         <img src="images/portfolio/Picture2_1.png" class="img-fluid" alt="" style="height: 80px;">
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-6">
-                                <div class="card">
+                            <div class="col-md-6 col-sm-12">
+                                <div class="card mb-0">
                                     <div class="card-header py-2">
                                         <h5 class="m-0">Tv Scorecard: Performance Of Each Brand On Different Parameters</h5>
                                     </div>
                                     <div class="card-body p-0">
-                                        <img src="images/portfolio/Picture3.png" class="img-fluid" alt="">
+                                        <img src="images/portfolio/Picture3.png" class="img-fluid" alt="" style="width: 700px">
                                         <img src="images/portfolio/Picture3_1.png" class="img-fluid" alt="" style="width:auto; height: 25px;">
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-6">
-                                <div class="card">
+                            <div class="col-md-6 col-sm-12">
+                                <div class="card mb-0">
                                     <div class="card-header py-2">
                                         <h5 class="m-0">Identification Of Portfolio Level Opportunities For Investments Shift</h5>
                                     </div>
                                     <div class="card-body p-0">
-                                        <img src="images/portfolio/Picture4.png" class="img-fluid" alt="">
+                                        <img src="images/portfolio/Picture4.png" class="img-fluid" alt="" style="width: 700px">
                                     </div>
                                 </div>
                             </div>
