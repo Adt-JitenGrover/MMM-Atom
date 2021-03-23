@@ -204,6 +204,40 @@
             background: #df570c !important;
         }
     </style>
+
+<script> 
+
+    function myFunction1() {
+
+      document.getElementById("media").style.display = "block";
+
+      document.getElementById("pricing").style.display = "none";
+
+      document.getElementById("distribution").style.display = "none";
+
+  }
+
+  function myFunction2() {
+
+    document.getElementById("media").style.display = "none";
+
+    document.getElementById("pricing").style.display = "block";
+
+    document.getElementById("distribution").style.display = "none";
+
+  }
+
+  function myFunction3() {
+
+    document.getElementById("media").style.display = "none";
+
+    document.getElementById("pricing").style.display = "none";
+
+    document.getElementById("distribution").style.display = "block";
+
+  }
+
+  </script>
 </head>
 
 <body>
@@ -357,11 +391,13 @@
                                 Deep Dives
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                              <a class="dropdown-item" href="#">Media Deep Dives</a>
-                              <a class="dropdown-item" href="#">Pricing Deep Dives</a>
-                              <a class="dropdown-item" href="#">Distribution Deep Dives</a>
+                              <a class="dropdown-item" onclick="myFunction1()" href="#">Media Deep Dives</a>
+                              <a class="dropdown-item" onclick="myFunction2()" href="#">Pricing Deep Dives</a>
+                              <a class="dropdown-item" onclick="myFunction3()" href="#">Distribution Deep Dives</a>
                             </div>
                           </div>
+                          <div id="media">
+                            <h4 class="bg-light p-2 text-center border">Media Deep Dives</h4>
                         <div class="row mb-3">
                             <div class="col-6">
                                 <div class="card">
@@ -405,7 +441,10 @@
                                 </div>
                             </div>
                         </div>
+                        </div>
 
+                        <div id="pricing" style="display: none;">
+                            <h4 class="bg-light p-2 text-center border">Pricing Deep Dives</h4>
                         <div class="row mb-3">
                             <div class="col-6">
                                 <div class="card">
@@ -428,8 +467,11 @@
                                 </div>
                             </div>
                         </div>
+                        </div>
 
-                        <div class="row mb-3">
+                        <div id="distribution" style="display: none;">
+                            <h4 class="bg-light p-2 text-center border">Distribution Deep Dives</h4>
+                            <div class="row mb-3">
                             <div class="col-6">
                                 <div class="card">
                                     <div class="card-header py-2">
@@ -452,6 +494,8 @@
                             </div>
                         </div>
                     </div>
+                    </div>
+
                     <div class="tab-pane fade" id="portfolio" role="tabpanel" aria-labelledby="portfolio-tab">
 
                         <div class="row mb-3">
