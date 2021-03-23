@@ -1,0 +1,106 @@
+.btn {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+// primary button
+.primaryButton {
+    color: $white;
+    background: linear-gradient(45deg, #946FFA, #88AAFF);
+    border: 0;
+    &:hover {
+        background: linear-gradient(45deg, #88AAFF, #946FFA);
+    }
+    &:focus {
+        box-shadow: 0 0 0 2px lighten($primary, 20);
+    }
+}
+
+// success button
+.successButton {
+    color: $white;
+    background: linear-gradient(45deg, $success, darken($success, 10));
+    border: 0;
+    &:hover {
+        background: linear-gradient(45deg, darken($success, 10), $success);
+    }
+    &:focus {
+        box-shadow: 0 0 0 2px lighten($success, 20);
+    }
+}
+
+// warning button
+.warningButton {
+    color: $white;
+    background: linear-gradient(45deg, $warning, darken($warning, 10));
+    border: 0;
+    &:hover {
+        background: linear-gradient(45deg, darken($warning, 10), $warning);
+    }
+    &:focus {
+        box-shadow: 0 0 0 2px lighten($warning, 20);
+    }
+}
+
+// danger button
+.dangerButton {
+    color: $white;
+    background: linear-gradient(45deg, $danger, darken($danger, 10));
+    border: 0;
+    &:hover {
+        background: linear-gradient(45deg, darken($danger, 10), $danger);
+    }
+    &:focus {
+        box-shadow: 0 0 0 2px lighten($danger, 20);
+    }
+}
+
+// info button
+.infoButton {
+    color: $white;
+    background: linear-gradient(45deg, $info, darken($info, 10));
+    border: 0;
+    &:hover {
+        background: linear-gradient(45deg, darken($info, 10), $info);
+    }
+    &:focus {
+        box-shadow: 0 0 0 2px lighten($info, 20);
+    }
+}
+
+// secondary button
+.secondaryButton {
+    color: $white;
+    background: linear-gradient(45deg, $secondary, darken($secondary, 10));
+    border: 0;
+    &:hover {
+        background: linear-gradient(45deg, darken($secondary, 10), $secondary);
+    }
+    &:focus {
+        box-shadow: 0 0 0 2px lighten($secondary, 20);
+    }
+}
+
+// circle buttons
+@mixin circle_Btn($ht, $wd) {
+    width: $wd;
+    height: $ht;
+    border-radius: 50% !important;
+    padding: 0 !important;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.xxxCircleBtn {
+    @include circle_Btn(36px, 36px);
+    font-size: 16px;
+}
+
+.xxCircleBtn {
+    @include circle_Btn(32px, 32px);
+    font-size: 16px;
+}
+
+.xCircleBtn {
+    @include circle_Btn(25px, 25px);
+    font-size: 12px;
+}

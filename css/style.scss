@@ -1,0 +1,75 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+// Main Colors
+$primary: #015198; // 5E72E4
+$warning:#FFA403;
+$success:#10C38E;
+$danger:#FF905D;
+$info: #129BD0;
+$secondary: #58595B;
+$white:#fff;
+$black:#000;
+$light:#f1f3f4;
+// grid
+$grid-gutter-width: 15px;
+// radious
+$border-radius: 3px;
+// Alerts
+$alert-border-radius: 0;
+$alert-border-width: 0;
+$breadcrumb-bg: #fff;
+$input-focus-box-shadow: none;
+// font
+$font-family-base: 'Roboto',
+sans-serif;
+$font-size-base: 0.875rem;
+$line-height-base: 1.5;
+// dropdown
+$dropdown-padding-y: 0;
+$dropdown-item-padding-y: 8px;
+$dropdown-item-padding-x: 15px;
+$dropdown-link-active-bg:$light;
+$dropdown-link-active-color: $primary;
+$dropdown-link-hover-color: $primary;
+$dropdown-link-hover-bg: $light;
+$dropdown-divider-margin-y: 0px;
+// input and buttons
+$input-height: 2rem;
+$input-btn-padding-y: .15rem;
+$input-btn-padding-x: .75rem;
+// badges
+$badge-font-size: 11px;
+$badge-padding-y: 5px;
+$badge-padding-x: 8px;
+$border-radius: 3px;
+// spacer
+$spacer: 1rem;
+$spacers: ();
+$spacers: map-merge( ( 6: ($spacer * 6),
+7: ($spacer * 7),
+8: ($spacer * 8),
+9: ($spacer * 9),
+10: ($spacer * 10)),
+$spacers);
+// heading
+$h1-font-size: 2.5rem;
+$h2-font-size: 2.1875rem;
+$h3-font-size: 1.875rem;
+$h4-font-size: 1.5625rem;
+$h5-font-size: 1.25rem;
+$h6-font-size: 0.875rem;
+@import "../scss/bootstrap.scss";
+@import '../UIComponenet_style/alert';
+@import '../UIComponenet_style/checkboxRadio';
+@import '../UIComponenet_style/table';
+@import '../UIComponenet_style/buttons';
+@import '../UIComponenet_style/customUtilityClasses';
+@import '../UIComponenet_style/dropdown';
+@import '../UIComponenet_style/scroll';
+@import '../UIComponenet_style/select';
+@import '../UIComponenet_style/dragdrop';
+@import '../UIComponenet_style/badges';
+@import '../UIComponenet_style/navs';
+@import '../UIComponenet_style/readMore';

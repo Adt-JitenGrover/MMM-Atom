@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ATOM</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/hover-min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <style>
+        body {
+            font-size: 14px !important;
+            font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif !important;
+        }
+        
+        .navbar-inverse {
+            background: #380058;
+            background: -moz-linear-gradient(left, #380058 0%, #0021df 100%);
+            background: -webkit-linear-gradient(left, #380058 0%, #0021df 100%);
+            min-height: 80px;
+        }
+        
+        .gray-bg {
+            background: #f5f5f5;
+            border: 1px solid #eee;
+            min-height: 150px;
+            margin-bottom: 0px;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        
+        .panel-default>.panel-heading {
+            background-image: none !important;
+            background: #0152a6 !important;
+            ;
+            background: -moz-linear-gradient(top, #0152a6 0%, #180a8a 100%) !important;
+            ;
+            background: -webkit-linear-gradient(top, #0152a6 0%, #180a8a 100%) !important;
+            ;
+            background: linear-gradient(to bottom, #0152a6 0%, #180a8a 100%) !important;
+            ;
+            color: #fff !important;
+        }
+        
+        .btn-default {
+            color: #ffffff;
+            background-color: #df570c;
+            border-color: #df570c;
+            border-radius: 5px;
+            box-shadow: 2px 2px 3px #ccc;
+        }
+        
+        .btn-default:hover {
+            background: #c14000;
+            border: 1px solid #ccc;
+        }
+        
+        .navbar-inverse .navbar-nav>li>a:hover,
+        .navbar-inverse .navbar-nav>li>a:focus {
+            color: #fff !important;
+            background: #df570c !important;
+        }
+        
+        .navbar-inverse .navbar-nav>.active>a,
+        .navbar-inverse .navbar-nav>.active>a:hover,
+        .navbar-inverse .navbar-nav>.active>a:focus {
+            color: #fff !important;
+            background: #df570c !important;
+        }
+        
+        .dropdown-item:hover {
+            color: #fff !important;
+            background: #df570c !important;
+        }
+        
+        .card {
+            padding: 0px;
+            margin-bottom: 20px;
+            background-color: #fff;
+            border: 1px solid #e3e3e3;
+        }
+        
+        .card-header {
+            margin: 0px;
+            padding: 10px;
+            font-size: 18px;
+            font-weight: 500;
+            color: #fff;
+            background: #0152a6;
+            background: -moz-linear-gradient(top, #0152a6 0%, #180a8a 100%);
+            background: -webkit-linear-gradient(top, #0152a6 0%, #180a8a 100%);
+            background: linear-gradient(to bottom, #0152a6 0%, #180a8a 100%);
+        }
+        
+        .nav-link {
+            background: #fff;
+            color: #df570c !important;
+            padding: 10px 15px !important;
+        }
+        
+        .nav-link:hover {
+            background: #df570c !important;
+            color: #fff !important;
+        }
+        
+        .nav-tabs {
+            margin: 5px 0px;
+            background: #df570c
+        }
+        
+        .nav-tabs>li>a {
+            background: #df570c;
+            color: #fff;
+            border: 1px solid #ccc !important;
+        }
+        
+        .nav-tabs>li>a:hover {
+            color: #df570c !important;
+            background: #fff !important;
+        }
+        
+        .nav-tabs>li>a>h4 {
+            margin: 0px;
+            font-weight: 500;
+        }
+        
+        h4,
+        .h4 {
+            font-size: 19px;
+            color: #df570c;
+            font-weight: 600;
+        }
+        
+        .nav-tabs>li.active>a,
+        .nav-tabs>li.active>a:hover,
+        .nav-tabs>li.active>a:focus {
+            color: #df570c !important;
+            background: #fff !important;
+        }
+        
+        .shiny-tab-input {
+            background: #fff !important;
+        }
+        
+        .shiny-tab-input li {}
+        
+        .shiny-tab-input li a {
+            background: #f3f3f3 !important;
+            color: #df570c !important;
+            position: relative;
+            display: block;
+            padding: 10px 15px;
+            margin-right: 2px;
+            line-height: 1.42857143;
+        }
+        
+        .shiny-tab-input>li>a.active,
+        .shiny-tab-input>li>a.active:hover,
+        .shiny-tab-input>li>a.active:focus {
+            color: #df570c !important;
+            background: #fff !important;
+            border-bottom: none !important;
+        }
+        
+        .nav-tabs .nav-link {
+            border-radius: 0;
+        }
+        
+        .nav-tabs .nav-item {
+            margin-bottom: -3px;
+        }
+        
+        .btn {
+            padding: 5px 15px;
+        }
+        
+        .scurvegraybg {
+            height: 150px;
+            width: 100%;
+            background: #f5f5f5;
+            border: 1px solid #ccc;
+        }
+        
+        .modal-body {
+            background: #f5f5f5;
+        }
+        
+        .modal-footer {
+            padding: 10px !important;
+        }
+        
+        .modal-header {
+            background: #0152a6 !important;
+            color: #fff;
+        }
+        
+        .dropdown-item.active,
+        .dropdown-item:active {
+            color: #fff !important;
+            background: #df570c !important;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light navbar-inverse fixed-top">
+        <a class="navbar-brand p-0" href="#">
+            <img src="images/logo-w.png" alt="" style="height: 60px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+         </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto mt-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class=" fa fa-upload fa-fw"></i> Import Data</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"> <i class=" fa fa-sitemap fa-fw"></i> Classification</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"> <i class=" fa fa-edit fa-fw"></i> Customization</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"> <i class=" fa fa-calculator fa-fw"></i> Exploration</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"> <i class=" fa fa-line-chart fa-fw"></i> Model</a>
+                </li>
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class=" fa fa-list-alt fa-fw"></i> Results
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Periodic</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Overall</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">S-curve</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Save Results</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item active" href="#">Output</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"> <i class=" fa fa-cloud fa-fw"></i> Cloud Storage</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"> <i class=" fa fa-home fa-fw"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"> <i class=" fa fa-sign-out fa-fw"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"> <i class=" fa fa-refresh fa-fw"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"> <i class=" fa fa-bars fa-fw"></i> </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid mt-6">
+        <h4 class="bg-light p-2 text-center border">Output</h4>
+        <div class="row">
+            <div class="col">
+                <ul class="nav nav-tabs shiny-tab-input" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Summary</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="deepDrive-tab" data-toggle="tab" href="#deepDrive" role="tab" aria-controls="deepDrive" aria-selected="false">Deep Drive</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="portfolio-tab" data-toggle="tab" href="#portfolio" role="tab" aria-controls="portfolio" aria-selected="false">Portfolio</a>
+                    </li>
+                </ul>
+                <div class="tab-content p-1" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <div class="row mb-3">
+                            <div class="col-6">
+                                <!-- <div class="card">
+                                    <div class="card-header py-2">
+                                        <h5 class="m-0">Volume Decomposition – Base Vs. Incremental</h5>
+                                    </div>
+                                    <div class="card-body p-0 text-center">
+                                        <div class="row">
+                                            <div class="col-4">
+                                                <img src="images/slide3-1.png" class="img-fluid" alt="">
+                                            </div>
+                                            <div class="col-4">
+                                                <img src="images/slide3-2.png" class="img-fluid" alt="">
+                                            </div>
+                                            <div class="col-4">
+                                                <img src="images/slide3-3.png" class="img-fluid" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
+                                <div class="card">
+                                    <div class="card-header py-2">
+                                        <h5 class="m-0">KEY DRIVERS OF SALES & GROWTH</h5>
+                                    </div>
+                                    <div class="card-body p-0 text-center">
+                                                <img src="images/summary/image1.jpg" class="img-fluid" alt="">
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="col-6">
+                                <!-- <div class="card">
+                                    <div class="card-header py-2">
+                                        <h5 class="m-0">Drivers of Volume Change</h5>
+                                    </div>
+                                    <div class="card-body p-0 text-center py-2">
+                                        <img src="images/slide4.png" class="img-fluid" alt="">
+                                    </div>
+                                </div> -->
+                                <div class="card">
+                                    <div class="card-header py-2">
+                                        <h5 class="m-0">VOLUME DECOMPOSITION INTO BASE & INCREMENTAL BY YEAR</h5>
+                                    </div>
+                                    <div class="card-body p-0 text-center">
+                                                <img src="images/summary/image2.jpg" class="img-fluid" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="card">
+                                    <div class="card-header py-2">
+                                        <h5 class="m-0">THE RETURN ON INVESTMENT FOR DIFFERENT MEDIA CHANNELS</h5>
+                                    </div>
+                                    <div class="card-body p-0 text-center">
+                                                <img src="images/summary/image3.jpg" class="img-fluid" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="card">
+                                    <div class="card-header py-2">
+                                        <h5 class="m-0">THE INCREMENTAL IMPACT OF A NEW PRODUCT LAUNCH</h5>
+                                    </div>
+                                    <div class="card-body p-0 text-center">
+                                                <img src="images/summary/image4.jpg" class="img-fluid" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="deepDrive" role="tabpanel" aria-labelledby="deepDrive-tab">
+                        <div class="row mb-3">
+                            <div class="col-6">
+                                <div class="card">
+                                    <div class="card-header py-2">
+                                        <h5 class="m-0">Promo Price Elasticity</h5>
+                                    </div>
+                                    <div class="card-body p-2 text-center">
+                                        <img src="images/slide5-1.png" class="img-fluid" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="card">
+                                    <div class="card-header py-2">
+                                        <h5 class="m-0">Base Price Elasticity</h5>
+                                    </div>
+                                    <div class="card-body p-2 text-center">
+                                        <img src="images/slide5-2.png" class="img-fluid" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="card">
+                                    <div class="card-header py-2">
+                                        <h5 class="m-0">‘What if’ Pricing Actions: Brand A Vs. Brand B
+                                        </h5>
+                                    </div>
+                                    <div class="card-body p-2 text-center">
+                                        <img src="images/slide13.png" class="img-fluid" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="card">
+                                    <div class="card-header py-2">
+                                        <h5 class="m-0">Translating The Framework Into Pricing Strategy </h5>
+                                    </div>
+                                    <div class="card-body p-2 text-center">
+                                        <img src="images/edlp.png" class="img-fluid mt-3" alt="edlp">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="portfolio" role="tabpanel" aria-labelledby="portfolio-tab">
+
+                        <div class="row mb-3">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-header py-2">
+                                        <h5 class="m-0">Depth & Frequency Of Discounts</h5>
+                                    </div>
+                                    <div class="card-body p-0 text-center">
+                                        <img src="images/slide8.png" class="img-fluid" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="card">
+                                    <div class="card-header py-2">
+                                        <h5 class="m-0">Promotion ROIs </h5>
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <img src="images/slide10.jpg" class="img-fluid" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="card">
+                                    <div class="card-header py-2">
+                                        <h5 class="m-0">Relative Price Elasticities Across The Market </h5>
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <img src="images/slide12.png" class="img-fluid" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
