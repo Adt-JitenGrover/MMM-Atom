@@ -1,0 +1,38 @@
+.bootstrap-select>.dropdown-toggle {
+    background-color: $white;
+    border-color: #ced4da;
+    font-weight: normal;
+    text-transform: capitalize;
+}
+
+.bootstrap-select .dropdown-toggle:focus,
+.bootstrap-select>select.mobile-device:focus+.dropdown-toggle {
+    outline: 0 none !important;
+    box-shadow: none;
+}
+
+.bootstrap-select .btn-light:not(:disabled):not(.disabled):active:focus,
+.bootstrap-select .btn-light:not(:disabled):not(.disabled).active:focus,
+.bootstrap-select.show>.btn-light.dropdown-toggle:focus {
+    outline: 0 none !important;
+    box-shadow: none;
+}
+
+.bootstrap-select .btn-light:not(:disabled):not(.disabled):active,
+.bootstrap-select .btn-light:not(:disabled):not(.disabled).active,
+.bootstrap-select.show>.btn-light.dropdown-toggle {
+    background-color: $white;
+    border-color: #ced4da;
+}
+
+.bootstrap-select .bs-ok-default:after {
+    content: "\f14a" !important;
+    font-family: "FontAwesome";
+    width: inherit !important;
+    height: inherit !important;
+    border: inherit !important;
+    color: $primary;
+    transform: none !important;
+    display: inherit !important;
+    font-size: 18px;
+}

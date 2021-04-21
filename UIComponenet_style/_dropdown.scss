@@ -1,0 +1,6 @@
+.drpWithoutArrow {
+    cursor: pointer;
+    &:after {
+        display: none;
+    }
+}
